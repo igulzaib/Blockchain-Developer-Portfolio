@@ -1,0 +1,20 @@
+{
+  "name": "blockchain-developer-protfolio",
+  "version": "1.0.0",
+  "description": "This is a portfolio website for blockchain developer.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch dist/sass/styles.scss dist/css/styles.css"
+  },
+  "keywords": [
+    "portfolio",
+    "blockchain",
+    "developer"
+  ],
+  "author": "Gul Zaib",
+  "license": "MIT",
+  "dependencies": {
+    "git": "^0.1.5",
+    "sass": "^1.49.7"
+  }
+}

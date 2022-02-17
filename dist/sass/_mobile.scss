@@ -1,0 +1,23 @@
+@import "./config";
+
+// Wide screens
+@include mediaXl {
+}
+
+// Desktops and Laptops
+@include mediaLg {
+}
+
+// Tablets and Small Laptops
+@include mediaMd {
+  html {
+    font-size: 55%;
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  html {
+    font-size: 45%;
+  }
+}

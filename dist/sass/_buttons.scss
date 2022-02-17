@@ -1,0 +1,18 @@
+@import "./config";
+@import "./typography";
+@import "./utilities";
+
+.btn-primary {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 24px;
+  border-radius: 50px;
+  color: $on-primary-color;
+  @include m3-label-large;
+  background: $primary-gradient;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  border: 2px solid $on-primary-color;
+}

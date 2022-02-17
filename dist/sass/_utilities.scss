@@ -1,0 +1,24 @@
+@mixin border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+
+@mixin border-gradient-primary {
+  border-image-slice: $primary-gradient;
+}
+
+@mixin border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+@mixin mx-12 {
+  margin: 0 120px;
+}
+
+@mixin px-12 {
+  padding: 0 120px;
+}
+@mixin px-8 {
+  padding: 0 80px;
+}

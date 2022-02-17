@@ -1,5 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: #faf;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  max-width: 1440px;
+}
+
+main {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(67, 97, 238, 0.04) 0%, rgba(67, 97, 238, 0.04) 100%);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3f37c9 0%, #b5179e 100%);
+  position: relative;
+}
+.header #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+}
+.header #navbar .logo {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  cursor: pointer;
+}
+.header #navbar .nav-menu {
+  list-style-type: none;
+  display: flex;
+}
+.header #navbar .nav-menu li {
+  padding: 0.8rem 1.6rem;
+}
+.header #navbar .nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+}
+.header .hero {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "hero-content hero-content hero-content hero-content hero-content hero-content hero-content hero-image hero-image hero-image hero-image hero-image";
+  padding: 0 120px;
+}
+.header .hero-content {
+  grid-area: hero-content;
+  font-size: 34px;
+}
+.header .hero-image {
+  grid-area: hero-image;
+  width: 362px;
+}
+
+.btn-primary {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 24px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  background: linear-gradient(135deg, #3f37c9 0%, #b5179e 100%);
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  border: 2px solid #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

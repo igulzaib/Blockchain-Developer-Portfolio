@@ -1,5 +1,98 @@
-$primary-color: #faf;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "./config";
+@import "./utilities";
+@import "./typography";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
 
 body {
-  background-color: $primary-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include font-primary;
+  background-color: $on-primary-color;
+  max-width: 1440px;
 }
+
+main {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(67, 97, 238, 0.04) 0%,
+    rgba(67, 97, 238, 0.04) 100%
+  );
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  color: $on-primary-color;
+  background: $primary-gradient;
+  position: relative;
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include px-12;
+
+    .logo {
+      @include m3-title-large;
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      list-style-type: none;
+      display: flex;
+
+      li {
+        padding: 0.8rem 1.6rem;
+
+        a {
+          text-decoration: none;
+          color: $on-primary-color;
+          @include m3-label-large;
+        }
+      }
+    }
+  }
+
+  .hero {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "hero-content hero-content hero-content hero-content hero-content hero-content hero-content hero-image hero-image hero-image hero-image hero-image";
+    @include px-12;
+
+    &-content {
+      grid-area: hero-content;
+      font-size: 34px;
+      // @include md-headline-3;
+    }
+
+    &-image {
+      grid-area: hero-image;
+      width: 362px;
+    }
+  }
+}
+
+// .header::after {
+//   content: "";
+//   width: 100%;
+//   height: 108%;
+//   background: rgba(255, 255, 255, 0.01);
+//   backdrop-filter: blur(100px);
+//   position: absolute;
+// }
+
+@import "./buttons";
+@import "./mobile";

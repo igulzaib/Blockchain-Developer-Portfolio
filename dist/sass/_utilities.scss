@@ -1,15 +1,7 @@
-@mixin border-gradient {
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-}
-
-@mixin border-gradient-primary {
-  border-image-slice: $primary-gradient;
-}
-
-@mixin border-gradient-purple {
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+@mixin text-primary-gradient {
+  background: -webkit-linear-gradient($primary-color, $secondary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @mixin mx-12 {

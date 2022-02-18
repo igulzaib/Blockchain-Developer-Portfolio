@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s;
+  cursor: default;
 }
 
 html {
@@ -12,13 +15,27 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: #ffffff;
+  background-color: rgba(67, 97, 238, 0.04);
   max-width: 1440px;
 }
 
 main {
   width: 100%;
   background: linear-gradient(90deg, rgba(67, 97, 238, 0.04) 0%, rgba(67, 97, 238, 0.04) 100%);
+}
+
+.card--content__title {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  color: #3f37c9;
+}
+
+.card--content__description {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.05rem;
+  color: #636874;
+  color: #636874;
 }
 
 .header {
@@ -66,27 +83,148 @@ main {
   grid-area: hero-content;
   font-size: 34px;
 }
+.header .hero-content .btn-primary {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3f37c9 0%, #b5179e 100%);
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
 .header .hero-image {
   grid-area: hero-image;
   width: 362px;
 }
 
-.btn-primary {
+.heading-gradient {
+  background: -webkit-linear-gradient(#3f37c9, #b5179e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.6rem;
+  line-height: 6.9rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.heading-body-text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.05rem;
+  color: #636874;
+  text-align: center;
+}
+
+.services {
+  padding: 7.5rem 120px;
+}
+.services--cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2.7rem;
+  padding: 5rem 0;
+}
+.services--cards__card {
+  border: 1px solid #3f37c9;
+  border-radius: 12px;
+  padding: 16px;
+  transition-timing-function: ease-out;
+}
+.services--cards__card img {
+  width: 8rem;
+  margin-bottom: 0.8rem;
+}
+.services--cards__card .card--title {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  background: -webkit-linear-gradient(#3f37c9, #b5179e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+}
+.services--cards__card .card--body {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.025rem;
+  color: #636874;
+  margin-bottom: 0.8rem;
+}
+.services--cards__card .card--link {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.025rem;
+}
+.services--cards__card .card--link a {
+  text-decoration: none;
+  color: #b5179e;
+  cursor: pointer;
+}
+.services--cards__card .card--link a:hover {
+  text-decoration: underline;
+  color: #3f37c9;
+}
+.services--cards__card .card--link a i {
+  margin-left: 0.4rem;
+}
+.services--cards__card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.s3 {
+  padding: 0 120px;
+}
+.s3--card {
+  display: flex;
+  gap: 4.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.s3--card__image img {
+  width: 487px;
+}
+.s3--card__content .step {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #b5179e;
+}
+
+.s4 .btn-group {
+  text-align: center;
+  margin: 3.5rem 0;
+}
+.s4 .btn-group button {
   cursor: pointer;
   border: 0;
   padding: 10px 24px;
-  border-radius: 50px;
-  color: #ffffff;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2rem;
   letter-spacing: 0.01rem;
+  color: #ffffff;
   background: linear-gradient(135deg, #3f37c9 0%, #b5179e 100%);
-  transition: all 0.3s;
+  border-radius: 4px;
+  padding: 0.8rem 1.6rem;
+  margin: 0.4rem;
 }
-
-.btn-primary:hover {
-  border: 2px solid #ffffff;
+.s4 .btn-group button i {
+  color: #ffffff;
+  margin-left: 0.8rem;
+}
+.s4--card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 0 120px;
+  margin: 7.5rem 0;
+}
+.s4--card .image img {
+  width: 65rem;
 }
 
 @media screen and (max-width: 768px) {

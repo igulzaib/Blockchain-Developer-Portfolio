@@ -3,9 +3,13 @@
 @import "./config";
 @import "./utilities";
 @import "./typography";
+@import "./buttons";
 
 * {
   box-sizing: border-box;
+  @include font-primary;
+  transition: all 0.4s;
+  cursor: default;
 }
 
 html {
@@ -17,7 +21,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   @include font-primary;
-  background-color: $on-primary-color;
+  background-color: rgba($color: #4361ee, $alpha: 4%);
   max-width: 1440px;
 }
 
@@ -28,6 +32,17 @@ main {
     rgba(67, 97, 238, 0.04) 0%,
     rgba(67, 97, 238, 0.04) 100%
   );
+}
+
+// Universal Classes
+.card--content__title {
+  @include m3-headline-medium;
+  color: $primary-color;
+}
+
+.card--content__description {
+  @include m3-body-large;
+  color: $gray-1;
 }
 
 .header {
@@ -75,12 +90,167 @@ main {
     &-content {
       grid-area: hero-content;
       font-size: 34px;
-      // @include md-headline-3;
+
+      .btn-primary {
+        @include btn-primary;
+        border: 2px solid $on-primary-color;
+        border-radius: 50px;
+      }
     }
 
     &-image {
       grid-area: hero-image;
       width: 362px;
+    }
+  }
+}
+
+.heading-gradient {
+  @include text-primary-gradient;
+  @include md-headline-3;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.heading-body-text {
+  @include m3-body-large;
+  text-align: center;
+}
+
+///////////////////////////
+// Section-2 Services //
+///////////////////////////
+.services {
+  padding: 7.5rem 120px;
+
+  &--cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.7rem;
+    padding: 5rem 0;
+
+    &__card {
+      border: 1px solid $primary-color;
+      border-radius: 12px;
+      padding: 16px;
+      transition-timing-function: ease-out;
+
+      img {
+        width: 8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .card--title {
+        @include m3-title-large;
+        @include text-primary-gradient;
+        margin-bottom: 0.8rem;
+      }
+
+      .card--body {
+        @include card-body;
+        color: $gray-1;
+        margin-bottom: 0.8rem;
+      }
+
+      .card--link {
+        @include card-body;
+
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+            color: $primary-color;
+          }
+
+          i {
+            margin-left: 0.4rem;
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 4px 16px rgba($color: #000000, $alpha: 0.3);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Section-3 Development Process //
+.s3 {
+  padding: 0 120px;
+
+  &--card {
+    display: flex;
+    gap: 4.5rem;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-areas: "img img img img img content content content content content content content";
+    justify-content: space-between;
+    align-items: center;
+
+    &__image {
+      // grid-area: img;
+
+      img {
+        width: 487px;
+      }
+    }
+
+    &__content {
+      // grid-area: content;
+
+      .step {
+        @include m3-title-large;
+        color: $secondary-color;
+      }
+      // .title {
+      //   @include m3-headline-medium;
+      //   color: $primary-color;
+      // }
+      // .body-text {
+      //   @include m3-body-large;
+      //   color: $gray-1;
+      // }
+    }
+  }
+}
+
+///////////////////////////////////
+// Section-3 Development Process //
+///////////////////////////////////
+.s4 {
+  .btn-group {
+    text-align: center;
+    margin: 3.5rem 0;
+
+    button {
+      @include btn-primary;
+      border-radius: 4px;
+      padding: 0.8rem 1.6rem;
+      margin: 0.4rem;
+
+      i {
+        color: $on-primary-color;
+        margin-left: 0.8rem;
+      }
+    }
+  }
+
+  &--card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.8rem;
+    padding: 0 120px;
+    margin: 7.5rem 0;
+
+    .image {
+      img {
+        width: 65rem;
+      }
     }
   }
 }

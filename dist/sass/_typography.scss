@@ -84,6 +84,7 @@
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: 0.05rem;
+  color: $gray-1;
 }
 @mixin m3-body-medium {
   font-size: 1.4rem;
@@ -94,4 +95,10 @@
   font-size: 1.2rem;
   line-height: 1.6rem;
   letter-spacing: 0.04rem;
+}
+
+@mixin card-body {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.025rem;
 }

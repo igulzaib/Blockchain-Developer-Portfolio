@@ -24,6 +24,12 @@ main {
   background: linear-gradient(90deg, rgba(67, 97, 238, 0.04) 0%, rgba(67, 97, 238, 0.04) 100%);
 }
 
+.logo {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  cursor: pointer;
+}
+
 .card--content__title {
   font-size: 2.8rem;
   line-height: 3.6rem;
@@ -50,11 +56,6 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0 120px;
-}
-.header #navbar .logo {
-  font-size: 2.2rem;
-  line-height: 2.8rem;
-  cursor: pointer;
 }
 .header #navbar .nav-menu {
   list-style-type: none;
@@ -225,6 +226,62 @@ main {
 }
 .s4--card .image img {
   width: 65rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: #3f37c9;
+  padding: 4.5rem 120px;
+  color: #ffffff;
+}
+.footer-about .card--content__description {
+  color: #dadada;
+}
+.footer-links ul {
+  list-style-type: none;
+}
+.footer-links ul li {
+  padding: 0.4rem 1.6rem;
+}
+.footer-links ul li a {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: #dadada;
+}
+.footer-links ul li:hover a {
+  color: #b5179e;
+}
+.footer-cta .btn-primary {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3f37c9 0%, #b5179e 100%);
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+
+.footer-bottom {
+  width: 100%;
+  padding: 0.2rem;
+  background-color: #27292e;
+}
+.footer-bottom p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.04rem;
+  line-height: 0;
 }
 
 @media screen and (max-width: 768px) {
